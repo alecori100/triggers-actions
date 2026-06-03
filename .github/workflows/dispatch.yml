@@ -6,7 +6,6 @@ on:
       nivel_alerta:
         description: "Selecciona nivel de alerta"
         required: true
-        type: choice
         options:
           - bajo
           - medio
