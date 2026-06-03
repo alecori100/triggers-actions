@@ -4,12 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       nivel_alerta:
-        description: "Selecciona nivel de alerta"
+        description: "Selecciona nivel de alerta (bajo, medio, alto)"
         required: true
-        options:
-          - bajo
-          - medio
-          - alto
+        default: bajo
 
 jobs:
   run-message:
