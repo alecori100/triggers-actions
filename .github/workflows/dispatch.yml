@@ -18,3 +18,23 @@ jobs:
     steps:
       - name: Mostrar alerta
         run: echo "Nivel de alerta: ${{ github.event.inputs.nivel_alerta }}"
+name: Dispatch Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      nivel_alerta:
+        description: "Selecciona nivel de alerta"
+        required: true
+        type: choice
+        options:
+          - bajo
+          - medio
+          - alto
+
+jobs:
+  run-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar alerta
+        run: echo "Nivel de alerta: ${{ github.event.inputs.nivel_alerta }}"
